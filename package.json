@@ -10,7 +10,8 @@
         },
         "scripts": {
                 "pack": "electron-builder --dir",
-                "dist": "electron-builder"
+                "dist": "electron-builder",
+                "dev": "electron ."
         },
         "build": {
                 "productName": "exe 名称",
