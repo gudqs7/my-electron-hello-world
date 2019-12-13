@@ -137,3 +137,5 @@ arch=ia32         # 这个字段的值, 使用--ia32 或 --x64 指定, 建议 ia
 > 另外多说一句, 若使用 32 位 windows 系统, cnpm i 下载依赖时就会下载 electron 的一个 sdk(用于生成 exe 的核心文件), 这个 sdk 是区分平台和cpu架构的. 由于用命令行指定平台和 cpu 架构不仅麻烦, 而且他使用的下载地址, 网速偏慢(极慢), 而 cnpm i 下载时则相对较快(感谢马云), 所以推荐选择适当的操作系统来打包, 会比较快.
 
 - 另外, 尝试使用 `electron .` 这个命令在 `windows` 上是跑不来的, 但将其加入到 package.json 中的 script 然后使用 `cnpm run xxx` 就没问题了.
+
+- 送大家一个网址, 在线 ico 转换, 支持256x256 (https://www.aconvert.com/cn/icon/png-to-ico/)
