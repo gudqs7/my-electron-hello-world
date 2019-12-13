@@ -1,0 +1,41 @@
+{
+        "name": "Hello",
+        "author": "guddqs",
+        "description": "your app description",
+        "version": "1.0.1",
+        "main": "app.js",
+        "devDependencies": {
+                "electron": "6.1.6",
+                "electron-builder": "^21.2.0"
+        },
+        "scripts": {
+                "pack": "electron-builder --dir",
+                "dist": "electron-builder"
+        },
+        "build": {
+                "productName": "exe 名称",
+                "appId": "org.gudqs.electron.hello",
+                "mac": {
+                        "category": "org.gudqs.electron.hello"
+                },
+                "win": {
+                        "icon": "icon/kenan.ico",
+                        "target": [
+                                {
+                                        "target": "nsis",
+                                        "arch": [
+                                                "ia32"
+                                        ]
+                                }
+                        ]
+                },
+                "nsis": {
+                        "oneClick": false,
+                        "allowElevation": true,
+                        "allowToChangeInstallationDirectory": true,
+                        "createDesktopShortcut": true,
+                        "createStartMenuShortcut": true,
+                        "shortcutName": "桌面 exe 名称"
+                }
+        }
+}
