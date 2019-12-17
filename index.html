@@ -6,5 +6,21 @@
 </head>
 <body>
     Hello World!
+    <p id='code'>
+
+    </p>
 </body>
+<script>
+    // if use jquery, you need delete require, exports, module . also , you need save rename require to nodeReuqire
+    window.nodeRequire = require;
+    delete window.require;
+    delete window.exports;
+    delete window.module;
+</script>
+<script type='text/javascript'>
+    var remote = nodeRequire('electron').remote;
+    var code = remote.getCurrentWindow().getMachineCode();
+    console.log(code);
+    document.getElementById('code').innerHTML = '机器码: ' + code;
+</script>
 </html>
